@@ -11,7 +11,7 @@ import java.util.List;
  *
  */
 public class ReportFileUtil {
-	
+
 	/* -- ATRIBUTOS -- */
 	private static List<ReportFileUtil> relatorios = new ArrayList<ReportFileUtil>();
 	
@@ -24,7 +24,7 @@ public class ReportFileUtil {
 	public ReportFileUtil(File relatorio) {
 		this.relatorio = relatorio;
 		this.name      = relatorio.getName();
-		this.cleanName = this.name.split("/.")[0];
+		this.cleanName = this.name.split("\\.")[0];
 	}
 	
 	/* -- GETTERS AND SETTERS -- */
@@ -96,6 +96,19 @@ public class ReportFileUtil {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static ReportFileUtil getReport(String reportName) {
+		if(relatorios == null || relatorios.isEmpty()) {
+			loadReports();
+		}
+		for(ReportFileUtil report : relatorios) {
+			if(report.getCleanName().equals(reportName)) {
+				return report;
+			}
+		}
+		
+		return null;
 	}
 	
 	@Override

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperPrint xmlns="http://jasperreports.sourceforge.net/jasperreports/print" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/print http://jasperreports.sourceforge.net/xsd/jasperprint.xsd" name="atendimentos_por_loja" pageWidth="595" pageHeight="842" topMargin="20" leftMargin="20" bottomMargin="20" rightMargin="20" locale="pt_BR" timezone="America/Fortaleza">
+	<property name="net.sf.jasperreports.export.xml.start.page.index" value="0"/>
+	<property name="net.sf.jasperreports.export.xml.end.page.index" value="0"/>
+	<property name="net.sf.jasperreports.export.xml.page.count" value="1"/>
+	<origin group="Lojas_Group" band="groupHeader"/>
+	<origin group="Lojas_Group" band="groupFooter"/>
+	<origin band="background"/>
+	<origin band="title"/>
+	<origin band="pageHeader"/>
+	<origin band="columnHeader"/>
+	<origin band="detail"/>
+	<origin band="columnFooter"/>
+	<origin band="pageFooter"/>
+	<origin band="summary"/>
+	<page>
+		<image scaleImage="RetainShape">
+			<reportElement uuid="653120c0-22bb-4433-8d50-d8890695b6ca" x="20" y="20" width="200" height="50" origin="3" srcId="3"/>
+			<imageSource isEmbedded="true">
+				<![CDATA[iVBORw0KGgoAAAANSUhEUgAAALAAAAAqCAYAAAATStF7AAADmElEQVR42u3bq5KjQBQG4DwR78AT
+8AJoNDY2DonDoVCoKBS1Va0wGAwGgWEFAtEGgfiXhEu4DrnM7FZt/aeKqpmkG3om35ycPmRO+OY4
+nU6zY/n43vhnz7t3nWefP1rX3rhnr/vsz/XqdV9d36vrfvf6n/4+P/ZGwARMwARMwARMwARMwARM
+wARMwARMwARMwARMwARMwARMwARMwARMwARMwARMwARMwARMwARMwARMwARMwARMwARMwARMwARM
+wP8aMIPxN4OAGQTMYBAwg0HADAJmMAj4/wqZR7heBcpmb0SDPIkQBMH9EHEKuXu2GlksurGhQFrI
+Z1eBJBLtuTM0fEkI+PnIYN57mCqiDWtNIWAqW71RHddsPqHeGauaHqqjVfhmN16xD8cSMKOPCq6h
+9NA0xEvAzYC7h6ibMA1tglNDNGrLZ2M1w4ShKY+5lvhiGQLqMFdzIPnCEPDxO3YKS+vQKDuA8yEr
+tocTFQ9vidfPOUF3k+6xyO7HKnDjchwbu8bjD6TeLjk8Y5KxVQIm4IMohLNREiwBNwjPXQZVzuHq
+HJGldvMMHzeXsdVnW92f17AygtbD9vO14DK8zNfBDEzARxHbQxmgwvHdHtgScI3AMqGpCow+y04j
+cfQxY96qiLrMIAIf10mmXgIOisX2rE5gDJnc1LuszgxMwIfbNv8MzXRx34M1CfS9GviLjoGjDrVt
+tD+sLiY1to5kkYCHDH/L4kXqsYQg4Hdq4fhlwOmkNrZEuXabXdsNnDYrDZbjZOKMNXPYPtWkDgET
+8BtRvwa4ipzDelXG9qrGNv1pGZLjvNgEjqAJmIB/CrBMvFkfOK72S4c4SpAmIc7aA/ElLOY1uGKh
+GMthh5s4Av45wPPOhbrekO3PhKUOGdtFmfkT0DnqWkLKGvnQjVAubW0u28d5P46AvwlwHlxm7bYg
+r1+6xNgqa8uDX7Z2+N8kLCUI+NsAz2retmwQmx+YaBBaXVvtHBQb57DH8kDY6nOAFZuACfhDwNNb
+vIq5aoNNqmO4Q62re5gPq+Hpj6z6W5YoigJlWfbH7esKWWj11zkjbb+vJEsIAv4QsLhMsqV1bTdm
+AmEYTo7bJ9Pyrsy4Plprphf3iCVCW590IrL9ZXATR8BvhYzHO3GzT6PVww2O47f6arlZ6/u7yuIW
+cfllh4NtNAJ+KwOn/e1cfZ6Bx8x8cLQlwzityeGa602a3mbv6nAZHjPwRvwBFQEmsdPhTfUAAAAA
+SUVORK5CYII=]]>
+			</imageSource>
+		</image>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375">
+			<reportElement uuid="b3dedab5-5a28-49aa-a221-8a87601e7544" x="20" y="119" width="100" height="20" origin="5" srcId="4"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[Data]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375">
+			<reportElement uuid="af91c465-2ea7-44eb-b375-df35bb3b1588" x="120" y="119" width="100" height="20" origin="5" srcId="5"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[Quantidade]]></textContent>
+		</text>
+		<text verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375">
+			<reportElement uuid="ddbd50c1-4faf-475a-93fc-800d2dbb0870" x="20" y="139" width="284" height="20" origin="0" srcId="1"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[Loja: Aldeota]]></textContent>
+		</text>
+		<line>
+			<reportElement uuid="45ad79ce-2aee-4e47-b3ad-98d01bdf39fd" x="20" y="159" width="555" height="1" origin="0" srcId="2"/>
+		</line>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.sql.Date" pattern="dd/MM/yyyy">
+			<reportElement uuid="1b34335a-1512-4449-87b4-f8942b61fe4b" x="20" y="161" width="100" height="20" origin="6" srcId="6"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[03/04/2013]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.lang.Long" pattern="">
+			<reportElement uuid="c089e467-45d0-4f56-a4c5-2ec8241f03e5" x="120" y="161" width="100" height="20" origin="6" srcId="7"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[1]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.sql.Date" pattern="dd/MM/yyyy">
+			<reportElement uuid="1b34335a-1512-4449-87b4-f8942b61fe4b" x="20" y="181" width="100" height="20" origin="6" srcId="6"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[23/12/2013]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.lang.Long" pattern="">
+			<reportElement uuid="c089e467-45d0-4f56-a4c5-2ec8241f03e5" x="120" y="181" width="100" height="20" origin="6" srcId="7"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[2]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.sql.Date" pattern="dd/MM/yyyy">
+			<reportElement uuid="1b34335a-1512-4449-87b4-f8942b61fe4b" x="20" y="201" width="100" height="20" origin="6" srcId="6"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[03/01/2014]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.lang.Long" pattern="">
+			<reportElement uuid="c089e467-45d0-4f56-a4c5-2ec8241f03e5" x="120" y="201" width="100" height="20" origin="6" srcId="7"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[2]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.sql.Date" pattern="dd/MM/yyyy">
+			<reportElement uuid="1b34335a-1512-4449-87b4-f8942b61fe4b" x="20" y="221" width="100" height="20" origin="6" srcId="6"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[26/01/2014]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.lang.Long" pattern="">
+			<reportElement uuid="c089e467-45d0-4f56-a4c5-2ec8241f03e5" x="120" y="221" width="100" height="20" origin="6" srcId="7"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[2]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.sql.Date" pattern="dd/MM/yyyy">
+			<reportElement uuid="1b34335a-1512-4449-87b4-f8942b61fe4b" x="20" y="241" width="100" height="20" origin="6" srcId="6"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[01/02/2014]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.lang.Long" pattern="">
+			<reportElement uuid="c089e467-45d0-4f56-a4c5-2ec8241f03e5" x="120" y="241" width="100" height="20" origin="6" srcId="7"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[2]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.sql.Date" pattern="dd/MM/yyyy">
+			<reportElement uuid="1b34335a-1512-4449-87b4-f8942b61fe4b" x="20" y="261" width="100" height="20" origin="6" srcId="6"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[15/02/2014]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.lang.Long" pattern="">
+			<reportElement uuid="c089e467-45d0-4f56-a4c5-2ec8241f03e5" x="120" y="261" width="100" height="20" origin="6" srcId="7"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[2]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.sql.Date" pattern="dd/MM/yyyy">
+			<reportElement uuid="1b34335a-1512-4449-87b4-f8942b61fe4b" x="20" y="281" width="100" height="20" origin="6" srcId="6"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[17/02/2014]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="10.0" lineSpacingFactor="1.0" leadingOffset="-2.4609375" valueClass="java.lang.Long" pattern="">
+			<reportElement uuid="c089e467-45d0-4f56-a4c5-2ec8241f03e5" x="120" y="281" width="100" height="20" origin="6" srcId="7"/>
+			<font fontName="Monospaced"/>
+			<textContent><![CDATA[4]]></textContent>
+		</text>
+	</page>
+</jasperPrint>
