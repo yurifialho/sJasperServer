@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="atendimentos_por_loja" pageWidth="595" pageHeight="842" whenNoDataType="BlankPage" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af3b6608-e078-415d-9713-2a9a72e432b6">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[Select l.descricao, a.created_at::date, count(*) From atendimentos a
+inner join lojas l on l.id = a.loja_id
+group by 1, 2
+order by 1, 2]]>
+	</queryString>
+	<field name="descricao" class="java.lang.String"/>
+	<field name="created_at" class="java.sql.Date"/>
+	<field name="count" class="java.lang.Long"/>
+	<group name="Lojas_Group">
+		<groupExpression><![CDATA[$F{descricao}]]></groupExpression>
+		<groupHeader>
+			<band height="22">
+				<textField>
+					<reportElement x="0" y="0" width="284" height="20" uuid="ddbd50c1-4faf-475a-93fc-800d2dbb0870"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Monospaced"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Loja: " + $F{descricao}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="20" width="555" height="1" uuid="45ad79ce-2aee-4e47-b3ad-98d01bdf39fd"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="200" height="50" uuid="653120c0-22bb-4433-8d50-d8890695b6ca"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="true" checksumRequired="false">
+					<jr:codeExpression><![CDATA["1234"]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="b3dedab5-5a28-49aa-a221-8a87601e7544"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="af91c465-2ea7-44eb-b375-df35bb3b1588"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<text><![CDATA[Quantidade]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="0" y="0" width="100" height="20" uuid="1b34335a-1512-4449-87b4-f8942b61fe4b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{created_at}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement x="100" y="0" width="100" height="20" uuid="c089e467-45d0-4f56-a4c5-2ec8241f03e5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

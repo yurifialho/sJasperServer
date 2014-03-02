@@ -7,21 +7,39 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.secoti.util.PropUtil;
+
 /**
- * Servlet implementation class ReportServlet
+ * 
+ * @author Yuri Fialho
+ * @since 28/02/2014
+ * 
  */
 @WebServlet(name = "report", urlPatterns = { "/report" })
 public class ReportServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-       
+    private static String isDevelopment = PropUtil.get("development-on"); 
+	
     public ReportServlet() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String isDevelopment = request.getParameter("DEVELOPMENT");
-		if(isDevelopment != null && !isDevelopment.trim().equals("") && isDevelopment.equalsIgnoreCase("true")) {
+		//Pega do request o flag de desenvolvimento
+		String developmentFlag = request.getParameter(PropUtil.get("development-flag"));
+		
+		if(isDevelopment == null || isDevelopment.trim().equals("")) {
+			response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED, "Development mode is not seted");
+			return;
+		}
+		
+		if(developmentFlag == null || developmentFlag.trim().equals("")) {
+			response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED, "Development mode key is not seted");
+			return;
+		}
+		//Verifica se a operação é permitida
+		if(isDevelopment.equals("true") && developmentFlag.equalsIgnoreCase("true")) {
 			
 		} else {
 			response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
