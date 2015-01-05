@@ -17,6 +17,12 @@ import net.sf.jasperreports.engine.export.JRHtmlExporter;
 import net.sf.jasperreports.engine.export.JRXlsExporter;
 import net.sf.jasperreports.engine.export.JRXmlExporter;
 
+/**
+ * 
+ * @author Yuri Fialho
+ * @since  02/03/2014
+ *
+ */
 public class ReportGenerator {
 	
 	public static void generate(String reportName, ReportsTypes type,

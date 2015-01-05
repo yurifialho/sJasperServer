@@ -70,6 +70,7 @@ public class ReportServlet extends HttpServlet {
 				}
 			} finally {
 				conn = null;
+				dataSource = null;
 			}
 		} else {
 			response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
